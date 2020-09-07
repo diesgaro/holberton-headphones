@@ -19,6 +19,7 @@ html{line-height:1.15;-webkit-text-size-adjust:100%}body{margin:0}main{display:b
     --font-family-base: 'Source Sans Pro', sans-serif;
 
     --font-size-small: 1.2rem;
+    --font-size-small-medium: 1.4rem;
     --font-size-medium: 1.6rem;
     --font-size-large: 1.8rem;
     --font-size-x-large: 2.3rem;
@@ -80,6 +81,10 @@ a {
     color: var(--text-color-white);
 }
 
+.text-blue {
+    color: var(--text-color-dark-blue);
+}
+
 .text-bold {
     font-weight: var(--font-weight-bold);
 }
@@ -92,6 +97,15 @@ a {
 .text-tagline {
     margin: 0;
 }
+
+.text-size-small {
+    font-size: var(--font-size-small);
+}
+
+.text-size-small-medium {
+    font-size: var(--font-size-small-medium);
+}
+
 /*** 2. LAYOUT ***/
 
 /* Layout
@@ -101,6 +115,10 @@ a {
     max-width: 1000px;
     margin-left: auto;
     margin-right: auto;
+}
+
+.text-title {
+    text-align: center;
 }
 
 /* Header
@@ -301,33 +319,37 @@ a {
 		text-align: center;
     }
 
-    /*.header-menu .header-logo {
-		flex-basis: 70%;
-    }*/
-    
     .nav .nav-item + .nav-item {
         margin: 0;
     }
 }
 
-/*.nav .nav-link::before {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    background-color: var(--color-white);
-    width: 0;
-    height: 0.2rem;
-}*/
+/*** What we do Section ***/
+.what-section {
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+}
 
-/*.nav .nav-item:hover .nav-link::before {
-    background-color: var(--color-primary);
-    width: 100%;
-}*/
+/*** Flex Containers ***/
 
-/*** 3. SECTION ***/
+.flex-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
 
-/*.section-hero {
-    position: relative;
-    margin-top: -8.5rem;
-}*/
+[class^="holberton_school-icon-"] {
+    color: var(--color-primary);
+    font-size: 100px;
+}
+
+.flex-item {
+    padding: 5px;
+    width: 200px;
+    height: 180px;
+    margin-top: 50px;
+    text-align: center;
+}
